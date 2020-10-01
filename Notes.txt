@@ -1,0 +1,40 @@
+
+Environment Setup With Node-Sass (should be in lover case separated with _ or - )
+  so, we can compile scss files and sass code into CSS.
+  
+  Doing everything using command line (bash terminal).
+
+  #_1_: First we will create package.json file by using command:
+
+  * npm init --y
+
+  This file is kind of manifest file  which has some information about the app or the packeges we
+  install such as node sass.
+
+  #_2_: Second we install node sass,
+
+  * npm install node-sass
+
+  This is going to install it in folder called node_modules and will include it in
+  package.json file as dependencies.
+
+  #_3_: Now in order to use node-sass we have to create an npm script. So, we include
+  the following in package.json file to script field; we also remove the default test 
+  field.
+
+  "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+
+  where: 
+    node-sass is script name which we want to run,
+    -w is a watch flag by which we want to constantly watch 'scss/',
+    -o is the output flag and we want to output to dist/css where dist
+    is the place all of our project will live html, css all what we want
+    to deploy will go into dist folder,
+    then we have a --recursive flag.
+
+  #_4_: Now we run the following command..
+  
+  * npm run sass
+
+  This will constantly watch our scss folder and any scass we write will be 
+  compiled into Regular CSS and will be saved into dist folder with .css extention.
