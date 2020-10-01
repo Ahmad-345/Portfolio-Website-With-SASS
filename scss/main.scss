@@ -1,9 +1,9 @@
 
-/* Partials */ 
+// Partials
 @import 'config';
 @import 'utilities';
 
-/* General styles */
+// General styles
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +33,7 @@ img {
 }
 
 
-/* Logo */
+// Logo
 #logo {
   width: 70px;
   height: 70px;
@@ -41,7 +41,7 @@ img {
   text-transform: uppercase;
 }
 
-/* Main Navbar */
+// Main Navbar
 #main-nav {
   display: flex;
   justify-content: space-between;
@@ -73,15 +73,15 @@ img {
   }
 }
 
-/* Header */
+// Header
 #header {
-  /* header-home */
+  // header-home
   &-home {
     background: $bg-image no-repeat center right / cover;
     height: 100vh;
     color: #fff;
 
-    /* Header Content */
+    // Header Content
     .header-content {
       text-align: center;
       padding-top: 20%;
@@ -93,17 +93,17 @@ img {
     }
   }
 
-  /* Header Inner */
+  // Header Inner
   &-inner {
 
   }
 }
 
 
-/* Home Section */
+// Home Section
 #home {
 
-  /* Section A: Specialize */
+  // Section A: Specialize
   &-a {
     .specials {
       margin-top: 3rem;
@@ -116,9 +116,9 @@ img {
         padding-bottom: 0.4rem;
       }
     }
-  } /* /Section A: Specialize */
+  } // END::Section A: Specialize
 
-  /* Section B: Stats */
+  // Section B: Stats 
   &-b {
     .stats {
       display: grid;
@@ -148,10 +148,96 @@ img {
         }
       }
     }
+  } // END::Section B: Stats
+
+  // Section C: Process 
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      // process-icon
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        // color: #fff;
+        color: set-text-color($dark-color); // returns light-color
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 0.5s;
+
+        // process-icon hover
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+
+      // process-step
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background-color: $main-color; 
+        color: set-text-color($main-color); 
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 0.5s;
+      }
+    }
+  } // END::Section C: Process
+} // END::Home Section
+
+
+// Footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  // footer content
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
   }
-  /* /Section B: Stats */
-} 
+
+  // social icons
+  .social .fab {
+    margin-right: 1rem;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0.5rem;
+
+    // social icons hover 
+    &:hover {
+      background: $main-color;
+    }
+  }
+}// END::Footer
 
 
-/* /Home Section */
+
 

@@ -1,5 +1,5 @@
 
-/* Utilities */
+// Utilities 
 .container {
   max-width: $website-width;
   padding: 0 1.5rem;
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-/* Buttons */
+// Buttons 
 %btn-shared {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -52,15 +52,14 @@ input[class^='btn-']:hover {
 
 .text-center { text-align: center; }
 
-/* Paddings */
+// Paddings  
 .py {
   &-1 { padding: 1rem 0; }
   &-2 { padding: 2rem 0; }
   &-3 { padding: 3rem 0; }
   &-4 { padding: 4rem 0; }
 }
-
-/* Margins*/ 
+//  Margins  
 .my {
   &-1 { margin: 1rem 0; }
   &-2 { margin: 2rem 0; }
@@ -68,3 +67,21 @@ input[class^='btn-']:hover {
   &-4 { margin: 4rem 0; }
 }
 
+// section title
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+// Bottom Line Bar
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
