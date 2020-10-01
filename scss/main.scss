@@ -105,7 +105,7 @@ img {
 // Home Sections
 #home {
 
-  // Section A: Specialize
+  // Section A: (Specialize)
   &-a {
     .specials {
       margin-top: 3rem;
@@ -118,9 +118,9 @@ img {
         padding-bottom: 0.4rem;
       }
     }
-  } // END::Section A: Specialize
+  } // END::Section A: (Specialize)
 
-  // Section B: Stats 
+  // Section B: (Stats) 
   &-b {
     .stats {
       display: grid;
@@ -150,9 +150,9 @@ img {
         }
       }
     }
-  } // END::Section B: Stats
+  } // END::Section B: (Stats)
 
-  // Section C: Process 
+  // Section C: (Process) 
   &-c {
     .process {
       display: grid;
@@ -204,12 +204,12 @@ img {
         transition: all 0.5s;
       }
     }
-  } // END::Section C: Process
+  } // END::Section C: (Process)
 } // END::Home Sections
 
 
 // About Sections
-// END::Section A: Info
+// END::About Section A: (Info)
 #about {
   &-a {
     .about-info {
@@ -246,10 +246,74 @@ img {
         }
       }
     }
-  }
-}
-// END::Section A: Info
-// END::About Sections
+  } // END::About Section A: (Info)
+
+
+  // About Section B: (Progress bars)
+  &-b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      // div with style="width" in html
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: $main-color;
+      }
+    }
+  } // END::About Section B: (Progress bars)
+
+
+  // About Section C: (Logos)
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      // logo image
+      img {
+        width: 70%;
+      }
+    }
+  } // END::About Section C: (Logos)
+
+
+  // About Section D: (Testimonials)
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  } // END::About Section D: (Testimonials)
+
+} // END::About Sections
 
 
 // Footer
