@@ -370,7 +370,6 @@ img {
       font-size: 4rem;
     }
   } // Section C: Tagline
-
 } // END::Contact Page
 
 // Footer
@@ -405,6 +404,7 @@ img {
   }
 }// END::Footer
 
-
+// Partials (Import media quries)
+@import 'media';
 
 
